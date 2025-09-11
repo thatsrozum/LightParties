@@ -1,0 +1,4 @@
+name: LightParties
+version: '1.0'
+main: me.rozum.lightparties.Main
+api-version: 1.18

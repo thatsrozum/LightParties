@@ -44,4 +44,8 @@ replay_pid*
 Thumbs.db
 
 # Ignore Gradle properties for local machine
+<<<<<<< HEAD
 gradle.properties
+=======
+gradle.properties
+>>>>>>> 7feffe3 (Initial Commit)
