@@ -1,6 +1,6 @@
 package me.rozum.lightparties.api
 
-import java.util.*
+import java.util.UUID
 
 interface PartyManager {
     fun create(creator: UUID): Boolean
