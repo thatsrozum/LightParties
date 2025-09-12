@@ -4,7 +4,8 @@
 /out/
 
 # Gradle wrapper jar files
-gradle-wrapper.jar
+/gradle-wrapper.jar
+!/gradle/wrapper/gradle-wrapper.jar
 
 # Gradle caches
 /.kotlin/
@@ -45,11 +46,6 @@ Thumbs.db
 
 # Ignore Gradle properties for local machine
 <<<<<<< HEAD
-<<<<<<< HEAD
-gradle.properties
-=======
 gradle.properties
 >>>>>>> 7feffe3 (Initial Commit)
-=======
-gradle.properties
 >>>>>>> 4c61eb9 (Initial commit)
