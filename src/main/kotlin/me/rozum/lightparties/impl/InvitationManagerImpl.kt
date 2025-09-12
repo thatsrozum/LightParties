@@ -10,6 +10,12 @@ class InvitationManagerImpl : InvitationManager {
 
     override fun send(inviter: UUID, invitee: UUID, millisRemoveDelay : Long) {
         invitations.computeIfAbsent(invitee) { mutableSetOf() }.add(inviter)
+
+        if (millisRemoveDelay < 0) {
+            remove(inviter, invitee)
+            return
+        }
+
         Timer().schedule(object : TimerTask() {
             override fun run() {
                 remove(inviter, invitee)
