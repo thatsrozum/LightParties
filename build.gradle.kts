@@ -30,10 +30,6 @@ kotlin {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            artifact(tasks.shadowJar.get()) {
-                classifier = null
-            }
-
             from(components["java"])
 
             pom {
