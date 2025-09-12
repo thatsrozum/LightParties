@@ -1,4 +1,4 @@
-package me.rozum.lightparties.api
+package com.github.thatsrozum.api
 
 import java.util.UUID
 

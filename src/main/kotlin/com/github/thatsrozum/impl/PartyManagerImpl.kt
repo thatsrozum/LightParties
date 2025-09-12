@@ -1,7 +1,7 @@
-package me.rozum.lightparties.impl
+package com.github.thatsrozum.impl
 
-import me.rozum.lightparties.api.Party
-import me.rozum.lightparties.api.PartyManager
+import com.github.thatsrozum.api.Party
+import com.github.thatsrozum.api.PartyManager
 import java.util.UUID
 
 class PartyManagerImpl : PartyManager {

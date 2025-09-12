@@ -1,6 +1,6 @@
-package me.rozum.lightparties.impl
+package com.github.thatsrozum.impl
 
-import me.rozum.lightparties.api.InvitationManager
+import com.github.thatsrozum.api.InvitationManager
 import java.util.Timer
 import java.util.TimerTask
 import java.util.UUID

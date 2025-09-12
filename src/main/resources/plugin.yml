@@ -1,4 +1,4 @@
 name: LightParties
 version: '1.0'
-main: me.rozum.lightparties.Main
+main: com.github.thatsrozum.Main
 api-version: 1.18

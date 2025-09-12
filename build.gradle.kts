@@ -1,9 +1,10 @@
 plugins {
     kotlin("jvm") version "2.2.20"
     id("com.gradleup.shadow") version "8.3.0"
+    id("maven-publish")
 }
 
-group = "me.rozum"
+group = "com.github.thatsrozum"
 version = "1.0"
 
 repositories {
@@ -24,6 +25,24 @@ java {
 
 kotlin {
     jvmToolchain(21)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            pom {
+                name = "LightParties"
+                description = "Lightweight boilerplate library for parties/teams"
+                url = "https://github.com/thatsrozum/LightParties"
+                licenses {
+                    license {
+                        name = "MIT License"
+                        url = "https://mit-license.org/"
+                    }
+                }
+            }
+        }
+    }
 }
 
 tasks {

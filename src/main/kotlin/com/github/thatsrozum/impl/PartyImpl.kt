@@ -1,6 +1,6 @@
-package me.rozum.lightparties.impl
+package com.github.thatsrozum.impl
 
-import me.rozum.lightparties.api.Party
+import com.github.thatsrozum.api.Party
 import java.util.UUID
 
 class PartyImpl(private var leader: UUID) : Party {

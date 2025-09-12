@@ -1,8 +1,8 @@
-package me.rozum.lightparties
+package com.github.thatsrozum
 
-import me.rozum.lightparties.api.LightPartiesAPI
-import me.rozum.lightparties.impl.InvitationManagerImpl
-import me.rozum.lightparties.impl.PartyManagerImpl
+import com.github.thatsrozum.api.LightPartiesAPI
+import com.github.thatsrozum.impl.InvitationManagerImpl
+import com.github.thatsrozum.impl.PartyManagerImpl
 import org.bukkit.plugin.ServicePriority
 import org.bukkit.plugin.java.JavaPlugin
 
