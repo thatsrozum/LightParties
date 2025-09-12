@@ -30,14 +30,20 @@ kotlin {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
+            artifact(tasks.shadowJar.get()) {
+                classifier = null
+            }
+
+            from(components["java"])
+
             pom {
-                name = "LightParties"
-                description = "Lightweight boilerplate library for parties/teams"
-                url = "https://github.com/thatsrozum/LightParties"
+                name.set("LightParties")
+                description.set("Lightweight boilerplate library for parties/teams")
+                url.set("https://github.com/thatsrozum/LightParties")
                 licenses {
                     license {
-                        name = "MIT License"
-                        url = "https://mit-license.org/"
+                        name.set("MIT License")
+                        url.set("https://mit-license.org/")
                     }
                 }
             }
