@@ -33,7 +33,7 @@ publishing {
             from(components["java"])
 
             artifact(tasks.shadowJar.get()) {
-                classifier = "all"
+                classifier = "shadow"
             }
 
             pom {
@@ -50,6 +50,7 @@ publishing {
         }
     }
 }
+
 
 tasks {
     build {
