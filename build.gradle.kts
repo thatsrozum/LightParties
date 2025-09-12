@@ -32,6 +32,10 @@ publishing {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
 
+            artifact(tasks.shadowJar.get()) {
+                classifier = "all"
+            }
+
             pom {
                 name.set("LightParties")
                 description.set("Lightweight boilerplate library for parties/teams")
