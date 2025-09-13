@@ -24,7 +24,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Build Javadocs
-        run: ./gradlew dokkaHtml
+        run: gradle dokkaHtml
 
       - name: Deploy Javadocs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
