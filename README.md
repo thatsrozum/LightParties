@@ -49,7 +49,7 @@ dependencies {
 ```
 </details> <details> <summary>Maven</summary>
 
-```
+```xml
 <repositories>
     <repository>
         <id>jitpack.io</id>
