@@ -15,7 +15,7 @@ A lightweight library for parties.
 
 ### Getting started
 
-1. Download the plugin and put it in your `plugins/` folder.
+1. [Download](https://github.com/thatsrozum/PartyLib/releases/download/1.0/PartyLib-1.0.jar) the plugin and put it in your `plugins/` folder.
 2. Add PartyLib as a softdepend in your `plugin.yml`:
 ```yaml
 softdepend: [PartyLib]
