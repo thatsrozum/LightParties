@@ -26,10 +26,14 @@ jobs:
       - name: Build Javadocs
         run: gradle dokkaHtml
 
+      - name: Move Javadocs to /javadocs directory
+        run: |
+          mkdir -p build/dokka/javadocs
+          mv build/dokka/html/* build/dokka/javadocs/
+
       - name: Deploy Javadocs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/dokka/html
+          publish_dir: build/dokka
           publish_branch: gh-pages
-
