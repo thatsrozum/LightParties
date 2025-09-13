@@ -1,12 +1,12 @@
 # PartyLib
 A lightweight library for parties.
 
-##### Prerequisites
+#### Prerequisites
 - **Java 11+** – Server must run at least this Java version.
 - **Minecraft 1.13+** – Server must run at least this version.
 - **Spigot API** – Built on Spigot, also works on **Paper** servers.
 
-##### Features
+#### Features
 - Manage parties easily
 - Send invitations with expiration
 - Custom events <ins>(coming soon)</ins>
