@@ -1,0 +1,32 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.github.thatsrozum.api////PointingToDeclaration/-party-lib/com.github.thatsrozum.api/index.html
+$dokka.location:com.github.thatsrozum.api/InvitationManager///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-invitation-manager/index.html
+$dokka.location:com.github.thatsrozum.api/InvitationManager/exists/#java.util.UUID#java.util.UUID/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-invitation-manager/exists.html
+$dokka.location:com.github.thatsrozum.api/InvitationManager/exists/#org.bukkit.entity.Player#org.bukkit.entity.Player/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-invitation-manager/exists.html
+$dokka.location:com.github.thatsrozum.api/InvitationManager/remove/#java.util.UUID#java.util.UUID/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-invitation-manager/remove.html
+$dokka.location:com.github.thatsrozum.api/InvitationManager/remove/#org.bukkit.entity.Player#org.bukkit.entity.Player/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-invitation-manager/remove.html
+$dokka.location:com.github.thatsrozum.api/InvitationManager/send/#org.bukkit.entity.Player#org.bukkit.entity.Player#kotlin.Long/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-invitation-manager/send.html
+$dokka.location:com.github.thatsrozum.api/LightPartiesAPI///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-light-parties-a-p-i/index.html
+$dokka.location:com.github.thatsrozum.api/LightPartiesAPI/getInvitationManager/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-light-parties-a-p-i/get-invitation-manager.html
+$dokka.location:com.github.thatsrozum.api/LightPartiesAPI/getPartyManager/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-light-parties-a-p-i/get-party-manager.html
+$dokka.location:com.github.thatsrozum.api/Member///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-member/index.html
+$dokka.location:com.github.thatsrozum.api/Member/Member/#java.util.UUID/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-member/-member.html
+$dokka.location:com.github.thatsrozum.api/Member/Member/#org.bukkit.entity.Player/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-member/-member.html
+$dokka.location:com.github.thatsrozum.api/Member/getPlayer/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-member/get-player.html
+$dokka.location:com.github.thatsrozum.api/Member/getUniqueId/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-member/get-unique-id.html
+$dokka.location:com.github.thatsrozum.api/Party///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party/index.html
+$dokka.location:com.github.thatsrozum.api/Party/addMember/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party/add-member.html
+$dokka.location:com.github.thatsrozum.api/Party/changeLeader/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party/change-leader.html
+$dokka.location:com.github.thatsrozum.api/Party/getLeader/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party/get-leader.html
+$dokka.location:com.github.thatsrozum.api/Party/getMembers/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party/get-members.html
+$dokka.location:com.github.thatsrozum.api/Party/hasMember/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party/has-member.html
+$dokka.location:com.github.thatsrozum.api/Party/removeMember/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party/remove-member.html
+$dokka.location:com.github.thatsrozum.api/PartyManager///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-manager/index.html
+$dokka.location:com.github.thatsrozum.api/PartyManager/create/#org.bukkit.entity.Player/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-manager/create.html
+$dokka.location:com.github.thatsrozum.api/PartyManager/disband/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-manager/disband.html
+$dokka.location:com.github.thatsrozum.api/PartyManager/exists/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-manager/exists.html
+$dokka.location:com.github.thatsrozum.api/PartyManager/get/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-manager/get.html
+$dokka.location:com.github.thatsrozum.api/PartyManager/getParties/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-manager/get-parties.html
+$dokka.location:com.github.thatsrozum.api/PartyManager/isLeader/#com.github.thatsrozum.api.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-manager/is-leader.html
+com.github.thatsrozum.api
