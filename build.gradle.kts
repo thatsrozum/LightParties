@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.2.20"
+    id("org.jetbrains.dokka") version "2.0.0"
     id("com.gradleup.shadow") version "8.3.0"
     id("maven-publish")
 }
@@ -16,6 +17,7 @@ repositories {
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.13-R0.1-SNAPSHOT")
+    dokkaPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:2.0.0")
 }
 
 java {
@@ -28,6 +30,12 @@ kotlin {
     jvmToolchain(8)
 }
 
+val dokkaJavadocJar by tasks.register<Jar>("dokkaJavadocJar") {
+    dependsOn(tasks.dokkaJavadoc)
+    from(tasks.dokkaJavadoc.flatMap { it.outputDirectory })
+    archiveClassifier.set("javadoc")
+}
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
@@ -36,6 +44,8 @@ publishing {
             artifact(tasks.shadowJar.get()) {
                 classifier = "shadow"
             }
+
+            artifact(dokkaJavadocJar)
 
             pom {
                 name.set("LightParties")
@@ -52,11 +62,11 @@ publishing {
     }
 }
 
-
 tasks {
     build {
         dependsOn(shadowJar)
     }
+
     processResources {
         filesMatching("plugin.yml") {
             expand("version" to project.version)

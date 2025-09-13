@@ -6,6 +6,9 @@ import com.github.thatsrozum.impl.PartyManagerImpl
 import org.bukkit.plugin.ServicePriority
 import org.bukkit.plugin.java.JavaPlugin
 
+/**
+ * @suppress
+ */
 class Main : JavaPlugin() {
     private val partyManager = PartyManagerImpl()
     private val invitationManager = InvitationManagerImpl()
@@ -13,11 +16,14 @@ class Main : JavaPlugin() {
     private lateinit var api: LightPartiesAPI
 
     override fun onEnable() {
+
+        // Initialize API
         api = object : LightPartiesAPI {
-            override fun invitationManager() = invitationManager
-            override fun partyManager() = partyManager
+            override fun getInvitationManager() = invitationManager
+            override fun getPartyManager() = partyManager
         }
 
+        // Register service object inside services manager
         server.servicesManager.register(
             LightPartiesAPI::class.java,
             api,
