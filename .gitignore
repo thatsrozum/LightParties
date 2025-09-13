@@ -46,3 +46,4 @@ Thumbs.db
 
 # Ignore Gradle properties for local machine
 gradle.properties
+/.github/
