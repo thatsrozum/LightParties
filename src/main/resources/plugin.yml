@@ -1,4 +1,4 @@
-name: LightParties
+name: PartyLib
 version: '1.0'
 main: com.github.thatsrozum.Main
 api-version: 1.13

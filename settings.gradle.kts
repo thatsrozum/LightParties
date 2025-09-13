@@ -1,1 +1,1 @@
-rootProject.name = "LightParties"
+rootProject.name = "PartyLib"

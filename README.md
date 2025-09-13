@@ -1,20 +1,28 @@
-# LightParties
-## A lightweight library for simple parties
+# PartyLib
+A lightweight library for parties.
 
-> [!NOTE]
-> This library doesn't do anything on its own, you have to implement commands or anything else yourself!
+##### Prerequisites
+- **Java 11+** – Server must run at least this Java version.
+- **Minecraft 1.13+** – Server must run at least this version.
+- **Spigot API** – Built on Spigot, also works on **Paper** servers.
 
-### What does it feature?:
-- Managing parties in an easy way
-- Sending invitations with expiration
-- Custom events for listeners <ins>(Not yet implemented)</ins>
+##### Features
+- Manage parties easily
+- Send invitations with expiration
+- Custom events <ins>(coming soon)</ins>
 
+---
 
-### How to add this library to your plugin
+### Getting started
 
-<details>
+1. Download the plugin and put it in your `plugins/` folder.
+2. Add PartyLib as a softdepend in your `plugin.yml`:
+```yaml
+softdepend: [PartyLib]
+```
+3. Add the JitPack repository and dependency.
 
-<summary>Gradle (Groovy DSL)</summary>
+<details> <summary>Gradle (Groovy DSL)</summary>
 
 ```groovy
 repositories {
@@ -23,15 +31,11 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.github.thatsrozum:LightParties:main-SNAPSHOT'
+    compileOnly 'com.github.thatsrozum:PartyLib:main-SNAPSHOT'
 }
 ```
 
-</details>
-
-<details>
-
-<summary>Gradle (Kotlin DSL)</summary>
+</details> <details> <summary>Gradle (Kotlin DSL)</summary>
 
 ```kotlin
 repositories {
@@ -40,17 +44,12 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.thatsrozum:LightParties:main-SNAPSHOT")
+    compileOnly("com.github.thatsrozum:PartyLib:main-SNAPSHOT")
 }
 ```
+</details> <details> <summary>Maven</summary>
 
-</details>
-
-<details>
-
-<summary>Maven</summary>
-
-```maven
+```
 <repositories>
     <repository>
         <id>jitpack.io</id>
@@ -61,7 +60,7 @@ dependencies {
 <dependencies>
     <dependency>
         <groupId>com.github.thatsrozum</groupId>
-        <artifactId>LightParties</artifactId>
+        <artifactId>PartyLib</artifactId>
         <version>main-SNAPSHOT</version>
         <scope>provided</scope>
     </dependency>
@@ -70,18 +69,20 @@ dependencies {
 
 </details>
 
-### How to load it
+### Usage
+
+Load it with the Services Manager:
 ```java
 public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        LightPartiesAPI lightPartiesAPI = getServer().getServicesManager().load(LightPartiesAPI.class);
+        PartyLibAPI partyLibAPI = getServer().getServicesManager().load(PartyLibAPI.class);
 
-        if (lightPartiesAPI != null) {
-            // Do whatever you want to do
+        if (partyLibAPI != null) {
+            // Your integration logic here
         } else {
-            // Handle if your plugin couldn't load it
+            getLogger().warning("PartyLib could not be loaded!");
         }
     }
 }
