@@ -1,19 +1,17 @@
 package com.github.thatsrozum.impl.managers
 
-import com.github.thatsrozum.PartyLibPlugin
 import com.github.thatsrozum.api.managers.InvitationManager
 import com.github.thatsrozum.events.invitation.InvitationRemoveEvent
 import com.github.thatsrozum.events.invitation.InvitationSendEvent
 import org.bukkit.entity.Player
-import java.util.Timer
-import java.util.TimerTask
-import java.util.UUID
+import org.bukkit.plugin.java.JavaPlugin
+import java.util.*
 import kotlin.concurrent.schedule
 
 /**
  * @suppress
  */
-class InvitationManagerImpl(private val plugin: PartyLibPlugin) : InvitationManager {
+class InvitationManagerImpl(private val plugin: JavaPlugin) : InvitationManager {
     private val invitations = mutableMapOf<UUID, MutableSet<UUID>>()
     private val schedules = mutableMapOf<Pair<UUID, UUID>, TimerTask>() // Pair's first = inviter, second = invitee
 

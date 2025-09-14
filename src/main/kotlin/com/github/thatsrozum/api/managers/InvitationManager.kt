@@ -32,7 +32,7 @@ interface InvitationManager {
     fun remove(inviter: UUID, invitee: UUID, reason: InvitationRemoveEvent.Reason = InvitationRemoveEvent.Reason.GENERIC): Boolean
 
     /**
-     * Checks if an invitation from [inviter] to [invitee].
+     * Checks if an invitation from [inviter] to [invitee] exists.
      *
      * @param inviter the [UUID] of the Bukkit Player who sent the invitation
      * @param invitee the [UUID] of the Bukkit Player who received the invitation

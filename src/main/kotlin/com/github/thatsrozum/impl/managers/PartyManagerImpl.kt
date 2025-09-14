@@ -1,19 +1,19 @@
 package com.github.thatsrozum.impl.managers
 
-import com.github.thatsrozum.PartyLibPlugin
 import com.github.thatsrozum.api.managers.PartyManager
 import com.github.thatsrozum.api.objects.Member
 import com.github.thatsrozum.api.objects.Party
+import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
 import com.github.thatsrozum.events.party.management.PartyCreateEvent
 import com.github.thatsrozum.events.party.management.PartyDisbandEvent
-import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
 import com.github.thatsrozum.impl.objects.PartyImpl
 import org.bukkit.entity.Player
+import org.bukkit.plugin.java.JavaPlugin
 
 /**
  * @suppress
  */
-class PartyManagerImpl(private val plugin: PartyLibPlugin) : PartyManager {
+class PartyManagerImpl(private val plugin: JavaPlugin) : PartyManager {
     private val partiesInternal = mutableSetOf<Party>()
     private val memberToParty = mutableMapOf<Member, Party>()
 

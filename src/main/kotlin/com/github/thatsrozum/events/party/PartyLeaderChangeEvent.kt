@@ -6,7 +6,9 @@ import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 
 /**
- * This event is fired after changing the leader of a party.
+ * Called when a leader has been changed in a party.
+ *
+ * This event is fired right after changing the leader of a party.
  *
  * @property previousLeader The previous leader of the party.
  * @property newLeader The new leader of the party.

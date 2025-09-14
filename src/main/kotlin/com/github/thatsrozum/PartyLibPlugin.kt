@@ -23,7 +23,7 @@ class PartyLibPlugin : JavaPlugin() {
             override fun getPartyManager() = partyManager
         }
 
-        // Register service object inside services manager
+        // Register service object in services manager
         server.servicesManager.register(
             PartyLibAPI::class.java,
             api,

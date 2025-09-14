@@ -6,7 +6,9 @@ import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 
 /**
- * This event is fired before removing all the data from the manager.
+ * Called when a party is about to be removed.
+ *
+ * This event is fired right before removing all the data from the manager.
  *
  * @property leader The leader of the party.
  * @property party The party which will be disbanded.

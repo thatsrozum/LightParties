@@ -5,13 +5,17 @@ import org.bukkit.event.HandlerList
 import java.util.UUID
 
 /**
- * This event is fired before removing the member from a party.
+ * Called when an invitation is about to be removed.
  *
- * @property inviter The inviter of the invitation that will be removed.
- * @property invitee The invitee of the invitation that will be removed.
- * @property reason The reason why member will be removed.
- * @property Reason.GENERIC - the generic reason of this event.
- * @property Reason.EXPIRATION - fired with this reason when the invitation expirates.
+ * This event is fired right before the removal happens.
+ *
+ * @property inviter The UUID of the player who originally sent the invitation.
+ * @property invitee The UUID of the player who received the invitation.
+ * @property reason The reason why this invitation is being removed.
+ *
+ * ### Reasons
+ * - [Reason.GENERIC] — A default, non-specific removal reason.
+ * - [Reason.EXPIRATION] — The invitation expired naturally without being accepted.
  */
 class InvitationRemoveEvent(
     val inviter: UUID,
@@ -25,7 +29,14 @@ class InvitationRemoveEvent(
 
     override fun getHandlers(): HandlerList = handlerList
 
+    /**
+     * The reason why an invitation was removed.
+     */
     enum class Reason {
-        GENERIC, EXPIRATION
+        /** Generic removal reason (eg., manual revoke). */
+        GENERIC,
+
+        /** The invitation expired without being accepted. */
+        EXPIRATION
     }
 }

@@ -6,7 +6,9 @@ import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 
 /**
- * This event is fired before adding the member to a party.
+ * Called when a member is about to be added to a party.
+ *
+ * This event is fired right before adding the member to a party.
  *
  * @property member The member which will be added.
  * @property party The party to which the member will be added.

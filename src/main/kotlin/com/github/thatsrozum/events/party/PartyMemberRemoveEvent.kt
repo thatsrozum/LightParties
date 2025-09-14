@@ -6,13 +6,17 @@ import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 
 /**
+ * Called when a member is about to be removed from a party.
+ *
  * This event is fired before removing the member from a party.
  *
  * @property member The member which will be removed.
  * @property party The party from which player will be removed.
  * @property reason The reason why member will be removed.
- * @property Reason.GENERIC - the generic reason of this event.
- * @property Reason.DISBAND - fired with this reason when the party is disbanded.
+ *
+ * ### Reasons
+ * - [Reason.GENERIC] — A default, non-specific removal reason.
+ * - [Reason.DISBAND] — The member was removed because the party got disbanded.
  */
 class PartyMemberRemoveEvent(
     val member: Member,
@@ -26,7 +30,14 @@ class PartyMemberRemoveEvent(
 
     override fun getHandlers(): HandlerList = handlerList
 
+    /**
+     * The reason why a member was removed from a party
+     */
     enum class Reason {
-        GENERIC, DISBAND
+        /** Generic removal reason (eg., manual revoke). */
+        GENERIC,
+
+        /** The member was removed because the party got disbanded. */
+        DISBAND
     }
 }

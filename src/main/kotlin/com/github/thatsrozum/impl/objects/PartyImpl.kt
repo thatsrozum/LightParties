@@ -1,17 +1,17 @@
 package com.github.thatsrozum.impl.objects
 
-import com.github.thatsrozum.PartyLibPlugin
 import com.github.thatsrozum.api.objects.Member
 import com.github.thatsrozum.api.objects.Party
 import com.github.thatsrozum.events.party.PartyLeaderChangeEvent
 import com.github.thatsrozum.events.party.PartyMemberAddEvent
 import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
 import com.github.thatsrozum.impl.managers.PartyManagerImpl
+import org.bukkit.plugin.java.JavaPlugin
 
 /**
  * @suppress
  */
-class PartyImpl(override var leader: Member, private val partyManagerImpl: PartyManagerImpl, private val plugin: PartyLibPlugin) : Party {
+class PartyImpl(override var leader: Member, private val partyManagerImpl: PartyManagerImpl, private val plugin: JavaPlugin) : Party {
     val membersInternal = mutableSetOf(leader)
 
     override val members: Set<Member>
