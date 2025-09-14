@@ -3,9 +3,7 @@ $dokka.linkExtension:html
 $dokka.location:com.github.thatsrozum.api.managers////PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/index.html
 $dokka.location:com.github.thatsrozum.api.managers/InvitationManager///PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-invitation-manager/index.html
 $dokka.location:com.github.thatsrozum.api.managers/InvitationManager/exists/#java.util.UUID#java.util.UUID/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-invitation-manager/exists.html
-$dokka.location:com.github.thatsrozum.api.managers/InvitationManager/exists/#org.bukkit.entity.Player#org.bukkit.entity.Player/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-invitation-manager/exists.html
-$dokka.location:com.github.thatsrozum.api.managers/InvitationManager/remove/#java.util.UUID#java.util.UUID/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-invitation-manager/remove.html
-$dokka.location:com.github.thatsrozum.api.managers/InvitationManager/remove/#org.bukkit.entity.Player#org.bukkit.entity.Player/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-invitation-manager/remove.html
+$dokka.location:com.github.thatsrozum.api.managers/InvitationManager/remove/#java.util.UUID#java.util.UUID#com.github.thatsrozum.events.invitation.InvitationRemoveEvent.Reason/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-invitation-manager/remove.html
 $dokka.location:com.github.thatsrozum.api.managers/InvitationManager/send/#org.bukkit.entity.Player#org.bukkit.entity.Player#kotlin.Long/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-invitation-manager/send.html
 $dokka.location:com.github.thatsrozum.api.managers/PartyManager///PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-party-manager/index.html
 $dokka.location:com.github.thatsrozum.api.managers/PartyManager/create/#org.bukkit.entity.Player/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.managers/-party-manager/create.html
@@ -26,6 +24,7 @@ $dokka.location:com.github.thatsrozum.api.objects/Party/changeLeader/#com.github
 $dokka.location:com.github.thatsrozum.api.objects/Party/getLeader/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.objects/-party/get-leader.html
 $dokka.location:com.github.thatsrozum.api.objects/Party/getMembers/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.objects/-party/get-members.html
 $dokka.location:com.github.thatsrozum.api.objects/Party/hasMember/#com.github.thatsrozum.api.objects.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.objects/-party/has-member.html
+$dokka.location:com.github.thatsrozum.api.objects/Party/removeMember/#com.github.thatsrozum.api.objects.Member#com.github.thatsrozum.events.party.PartyMemberRemoveEvent.Reason/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.objects/-party/remove-member.html
 $dokka.location:com.github.thatsrozum.api.objects/Party/removeMember/#com.github.thatsrozum.api.objects.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.objects/-party/remove-member.html
 $dokka.location:com.github.thatsrozum.api////PointingToDeclaration/-party-lib/com.github.thatsrozum.api/index.html
 $dokka.location:com.github.thatsrozum.api/PartyLibAPI///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-lib-a-p-i/index.html
