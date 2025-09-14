@@ -9,8 +9,8 @@ import java.util.UUID
  *
  * This event is fired right before the removal happens.
  *
- * @property inviter The UUID of the player who originally sent the invitation.
- * @property invitee The UUID of the player who received the invitation.
+ * @property inviter The [UUID] of the Bukkit Player who originally sent the invitation.
+ * @property invitee The [UUID] of the Bukkit Player who received the invitation.
  * @property reason The reason why this invitation is being removed.
  *
  * ### Reasons
