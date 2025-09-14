@@ -4,8 +4,12 @@ import org.bukkit.entity.Player
 
 /**
  * Manages [Party] instances.
+ *
+ * Used for creating and disbanding parties.
+ * @property parties The set of parties
  */
 interface PartyManager {
+    val parties: Set<Party>
 
     /**
      * Creates a new party with the given player as leader.
@@ -46,11 +50,4 @@ interface PartyManager {
      * @return `true` if the member is a leader, `false` if not or if the member is not in any party
      */
     fun isLeader(member: Member): Boolean
-
-    /**
-     * Returns a copy of all stored parties.
-     *
-     * @return a copied set of all parties
-     */
-    fun getParties(): Set<Party>
 }

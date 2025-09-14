@@ -7,19 +7,22 @@ import com.github.thatsrozum.api.Party
  * @suppress
  */
 class PartyImpl(override var leader: Member) : Party {
-    override val members = mutableSetOf(leader)
+    val membersInternal = mutableSetOf(leader)
+
+    override val members: Set<Member>
+        get() = membersInternal.toSet()
 
     override fun changeLeader(newLeader: Member): Member? {
-        if (newLeader !in members) return null
+        if (newLeader !in membersInternal) return null
         val oldLeader = leader
         leader = newLeader
         return oldLeader
     }
 
-    override fun addMember(member: Member): Boolean = members.add(member)
+    override fun addMember(member: Member): Boolean = membersInternal.add(member)
 
-    override fun removeMember(member: Member): Boolean = members.remove(member)
+    override fun removeMember(member: Member): Boolean = membersInternal.remove(member)
 
-    override fun hasMember(member: Member): Boolean = members.contains(member)
+    override fun hasMember(member: Member): Boolean = membersInternal.contains(member)
 }
 

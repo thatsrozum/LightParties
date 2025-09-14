@@ -7,7 +7,7 @@ import java.util.UUID
 /**
  * Represents a member of a [Party].
  *
- * A Member has a reference to a Bukkit Playher object and their unique ID ([UUID]).
+ * A Member has a reference to a Bukkit Player object and their unique ID ([UUID]).
  *
  * @property player The Bukkit Player object associated with this member.
  * @property uniqueId The unique identifier of this member.
