@@ -1,4 +1,4 @@
-package com.github.thatsrozum.impl
+package com.github.thatsrozum.impl.managers
 
 import com.github.thatsrozum.api.managers.InvitationManager
 import org.bukkit.entity.Player

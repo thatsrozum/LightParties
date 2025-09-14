@@ -1,4 +1,4 @@
-package com.github.thatsrozum.impl
+package com.github.thatsrozum.impl.objects
 
 import com.github.thatsrozum.api.objects.Member
 import com.github.thatsrozum.api.objects.Party
@@ -25,4 +25,3 @@ class PartyImpl(override var leader: Member) : Party {
 
     override fun hasMember(member: Member): Boolean = membersInternal.contains(member)
 }
-

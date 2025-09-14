@@ -1,8 +1,9 @@
-package com.github.thatsrozum.impl
+package com.github.thatsrozum.impl.managers
 
+import com.github.thatsrozum.api.managers.PartyManager
 import com.github.thatsrozum.api.objects.Member
 import com.github.thatsrozum.api.objects.Party
-import com.github.thatsrozum.api.managers.PartyManager
+import com.github.thatsrozum.impl.objects.PartyImpl
 import org.bukkit.entity.Player
 
 /**
