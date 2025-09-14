@@ -4,7 +4,7 @@ package com.github.thatsrozum.api.objects
  * Represents a party.
  *
  * @property leader The leader of the party.
- * @property members A copy of the members in the party.
+ * @property members A copy of the members set.
  */
 interface Party {
     val leader: Member

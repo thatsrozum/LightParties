@@ -8,7 +8,7 @@ import org.bukkit.entity.Player
  * Manages [Party] instances.
  *
  * Used for creating and disbanding parties.
- * @property parties The set of parties
+ * @property parties A copy of the parties set.
  */
 interface PartyManager {
     val parties: Set<Party>
