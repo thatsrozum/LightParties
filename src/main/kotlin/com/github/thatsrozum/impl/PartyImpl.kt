@@ -1,7 +1,7 @@
 package com.github.thatsrozum.impl
 
-import com.github.thatsrozum.api.Member
-import com.github.thatsrozum.api.Party
+import com.github.thatsrozum.api.objects.Member
+import com.github.thatsrozum.api.objects.Party
 
 /**
  * @suppress

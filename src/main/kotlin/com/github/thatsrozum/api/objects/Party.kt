@@ -1,4 +1,4 @@
-package com.github.thatsrozum.api
+package com.github.thatsrozum.api.objects
 
 /**
  * Represents a party.

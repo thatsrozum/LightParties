@@ -1,4 +1,4 @@
-package com.github.thatsrozum.api
+package com.github.thatsrozum.api.managers
 
 import org.bukkit.entity.Player
 import java.util.UUID
@@ -32,8 +32,8 @@ interface InvitationManager {
     /**
      * Removes an invitation from [inviter] to [invitee] using UUIDs.
      *
-     * @param inviter the [UUID] of the Bukkit Player who sent the invitation
-     * @param invitee the [UUID] of the Bukkit Player who received the invitation
+     * @param inviter the [java.util.UUID] of the Bukkit Player who sent the invitation
+     * @param invitee the [java.util.UUID] of the Bukkit Player who received the invitation
      * @return `true` if the invitation was removed successfully, `false` if it did not exist
      */
     fun remove(inviter: UUID, invitee: UUID): Boolean

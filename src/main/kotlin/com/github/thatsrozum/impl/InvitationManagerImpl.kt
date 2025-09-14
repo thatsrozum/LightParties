@@ -1,6 +1,6 @@
 package com.github.thatsrozum.impl
 
-import com.github.thatsrozum.api.InvitationManager
+import com.github.thatsrozum.api.managers.InvitationManager
 import org.bukkit.entity.Player
 import java.util.Timer
 import java.util.TimerTask
