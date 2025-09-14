@@ -2,11 +2,12 @@ package com.github.thatsrozum.impl.objects
 
 import com.github.thatsrozum.api.objects.Member
 import com.github.thatsrozum.api.objects.Party
+import com.github.thatsrozum.impl.managers.PartyManagerImpl
 
 /**
  * @suppress
  */
-class PartyImpl(override var leader: Member) : Party {
+class PartyImpl(override var leader: Member, private val partyManagerImpl: PartyManagerImpl) : Party {
     val membersInternal = mutableSetOf(leader)
 
     override val members: Set<Member>
@@ -19,9 +20,23 @@ class PartyImpl(override var leader: Member) : Party {
         return oldLeader
     }
 
-    override fun addMember(member: Member): Boolean = membersInternal.add(member)
+    override fun addMember(member: Member): Boolean {
+        if (partyManagerImpl.exists(member)) return false
 
-    override fun removeMember(member: Member): Boolean = membersInternal.remove(member)
+        membersInternal.add(member)
+        partyManagerImpl.onMemberAdded(this, member)
 
-    override fun hasMember(member: Member): Boolean = membersInternal.contains(member)
+        return true
+    }
+
+    override fun removeMember(member: Member): Boolean {
+        if (!partyManagerImpl.exists(member)) return false
+
+        membersInternal.remove(member)
+        partyManagerImpl.onMemberRemoved(member)
+
+        return true
+    }
+
+    override fun hasMember(member: Member): Boolean = member in membersInternal
 }
