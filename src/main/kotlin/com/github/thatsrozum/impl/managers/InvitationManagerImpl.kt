@@ -44,6 +44,8 @@ class InvitationManagerImpl : InvitationManager {
 
     override fun exists(inviter: UUID, invitee: UUID): Boolean = invitations[invitee]?.contains(inviter) == true
 
+    // Helper function to reduce duplicate lines of code
+
     private fun cancelSchedule(inviter: UUID, invitee: UUID) {
         val pair = Pair(inviter, invitee) // Transform these into a Pair object
         val timerTask = schedules.remove(pair) // Remove it from the map and get the timer task
