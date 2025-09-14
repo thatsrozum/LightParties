@@ -1,15 +1,19 @@
 package com.github.thatsrozum.impl.managers
 
+import com.github.thatsrozum.PartyLibPlugin
 import com.github.thatsrozum.api.managers.PartyManager
 import com.github.thatsrozum.api.objects.Member
 import com.github.thatsrozum.api.objects.Party
+import com.github.thatsrozum.events.party.management.PartyCreateEvent
+import com.github.thatsrozum.events.party.management.PartyDisbandEvent
+import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
 import com.github.thatsrozum.impl.objects.PartyImpl
 import org.bukkit.entity.Player
 
 /**
  * @suppress
  */
-class PartyManagerImpl : PartyManager {
+class PartyManagerImpl(private val plugin: PartyLibPlugin) : PartyManager {
     private val partiesInternal = mutableSetOf<Party>()
     private val memberToParty = mutableMapOf<Member, Party>()
 
@@ -19,10 +23,13 @@ class PartyManagerImpl : PartyManager {
     override fun create(creator: Player): Boolean {
         val member = Member(creator)
         if (exists(member)) return false
-        val party = PartyImpl(member, this)
+        val party = PartyImpl(member, this, plugin)
 
         partiesInternal.add(party)
         memberToParty[member] = party
+
+        val event = PartyCreateEvent(member, party)
+        plugin.server.pluginManager.callEvent(event)
 
         return true
     }
@@ -31,8 +38,14 @@ class PartyManagerImpl : PartyManager {
         val party = get(leader) ?: return false
         if (party.leader != leader) return false
 
+        val event = PartyDisbandEvent(leader, party)
+        plugin.server.pluginManager.callEvent(event)
+
+        party.members.forEach {
+            party.removeMember(it, PartyMemberRemoveEvent.Reason.DISBAND)
+            memberToParty.remove(it)
+        }
         partiesInternal.remove(party)
-        party.members.forEach { memberToParty.remove(it) }
 
         return true
     }

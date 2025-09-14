@@ -1,13 +1,17 @@
 package com.github.thatsrozum.impl.objects
 
+import com.github.thatsrozum.PartyLibPlugin
 import com.github.thatsrozum.api.objects.Member
 import com.github.thatsrozum.api.objects.Party
+import com.github.thatsrozum.events.party.PartyLeaderChangeEvent
+import com.github.thatsrozum.events.party.PartyMemberAddEvent
+import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
 import com.github.thatsrozum.impl.managers.PartyManagerImpl
 
 /**
  * @suppress
  */
-class PartyImpl(override var leader: Member, private val partyManagerImpl: PartyManagerImpl) : Party {
+class PartyImpl(override var leader: Member, private val partyManagerImpl: PartyManagerImpl, private val plugin: PartyLibPlugin) : Party {
     val membersInternal = mutableSetOf(leader)
 
     override val members: Set<Member>
@@ -17,11 +21,18 @@ class PartyImpl(override var leader: Member, private val partyManagerImpl: Party
         if (newLeader !in membersInternal) return null
         val oldLeader = leader
         leader = newLeader
+
+        val event = PartyLeaderChangeEvent(oldLeader, newLeader, this)
+        plugin.server.pluginManager.callEvent(event)
+
         return oldLeader
     }
 
     override fun addMember(member: Member): Boolean {
         if (partyManagerImpl.exists(member)) return false
+
+        val event = PartyMemberAddEvent(member, this)
+        plugin.server.pluginManager.callEvent(event)
 
         membersInternal.add(member)
         partyManagerImpl.onMemberAdded(this, member)
@@ -29,14 +40,19 @@ class PartyImpl(override var leader: Member, private val partyManagerImpl: Party
         return true
     }
 
-    override fun removeMember(member: Member): Boolean {
+    override fun removeMember(member: Member, reason: PartyMemberRemoveEvent.Reason): Boolean {
         if (!partyManagerImpl.exists(member)) return false
+
+        val event = PartyMemberRemoveEvent(member, this, reason)
+        plugin.server.pluginManager.callEvent(event)
 
         membersInternal.remove(member)
         partyManagerImpl.onMemberRemoved(member)
 
         return true
     }
+
+    override fun removeMember(member: Member): Boolean = removeMember(member, PartyMemberRemoveEvent.Reason.GENERIC)
 
     override fun hasMember(member: Member): Boolean = member in membersInternal
 }

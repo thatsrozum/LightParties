@@ -1,5 +1,8 @@
 package com.github.thatsrozum.api.objects
 
+
+import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
+
 /**
  * Represents a party.
  *
@@ -28,6 +31,15 @@ interface Party {
 
     /**
      * Removes a member from the party.
+     *
+     * @param member the member to remove
+     * @param reason the reason of removal
+     * @return `true` if the member was removed, `false` if the member was not in the party
+     */
+    fun removeMember(member: Member, reason: PartyMemberRemoveEvent.Reason): Boolean
+
+    /**
+     * Removes a member from the party. Reason defaults to [PartyMemberRemoveEvent.Reason.GENERIC]
      *
      * @param member the member to remove
      * @return `true` if the member was removed, `false` if the member was not in the party

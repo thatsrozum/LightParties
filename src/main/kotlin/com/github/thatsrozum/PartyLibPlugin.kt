@@ -10,8 +10,8 @@ import org.bukkit.plugin.java.JavaPlugin
  * @suppress
  */
 class PartyLibPlugin : JavaPlugin() {
-    private val partyManager = PartyManagerImpl()
-    private val invitationManager = InvitationManagerImpl()
+    private val partyManager = PartyManagerImpl(this)
+    private val invitationManager = InvitationManagerImpl(this)
 
     private lateinit var api: PartyLibAPI
 
