@@ -6,9 +6,9 @@ import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 
 /**
- * This event is fired after creating Party object and storing it
+ * This event is fired after creating Party object and storing it.
  *
- * @property creator The creator of the party, who also is the leader
+ * @property creator The creator of the party, who also is the leader.
  * @property party The party which was created.
  */
 class PartyCreateEvent(
