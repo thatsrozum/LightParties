@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.github.thatsrozum:PartyLib:1.3'
+    compileOnly 'com.github.thatsrozum:PartyLib:1.3.1'
 }
 ```
 
@@ -44,7 +44,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.thatsrozum:PartyLib:1.3")
+    compileOnly("com.github.thatsrozum:PartyLib:1.3.1")
 }
 ```
 </details> <details> <summary>Maven</summary>
@@ -61,7 +61,7 @@ dependencies {
     <dependency>
         <groupId>com.github.thatsrozum</groupId>
         <artifactId>PartyLib</artifactId>
-        <version>1.3</version>
+        <version>1.3.1</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
