@@ -1,8 +1,8 @@
-package com.github.thatsrozum
+package com.github.thatsrozum.partyLib
 
-import com.github.thatsrozum.api.PartyLibAPI
-import com.github.thatsrozum.impl.managers.InvitationManagerImpl
-import com.github.thatsrozum.impl.managers.PartyManagerImpl
+import com.github.thatsrozum.partyLib.api.PartyLibAPI
+import com.github.thatsrozum.partyLib.impl.managers.InvitationManagerImpl
+import com.github.thatsrozum.partyLib.impl.managers.PartyManagerImpl
 import org.bukkit.plugin.ServicePriority
 import org.bukkit.plugin.java.JavaPlugin
 

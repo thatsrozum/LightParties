@@ -1,4 +1,4 @@
-package com.github.thatsrozum.events.invitation
+package com.github.thatsrozum.partyLib.events.invitation
 
 import org.bukkit.event.Event
 import org.bukkit.event.HandlerList

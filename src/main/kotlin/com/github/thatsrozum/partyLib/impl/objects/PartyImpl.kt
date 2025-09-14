@@ -1,11 +1,11 @@
-package com.github.thatsrozum.impl.objects
+package com.github.thatsrozum.partyLib.impl.objects
 
-import com.github.thatsrozum.api.objects.Member
-import com.github.thatsrozum.api.objects.Party
-import com.github.thatsrozum.events.party.PartyLeaderChangeEvent
-import com.github.thatsrozum.events.party.PartyMemberAddEvent
-import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
-import com.github.thatsrozum.impl.managers.PartyManagerImpl
+import com.github.thatsrozum.partyLib.api.objects.Member
+import com.github.thatsrozum.partyLib.api.objects.Party
+import com.github.thatsrozum.partyLib.events.party.PartyLeaderChangeEvent
+import com.github.thatsrozum.partyLib.events.party.PartyMemberAddEvent
+import com.github.thatsrozum.partyLib.events.party.PartyMemberRemoveEvent
+import com.github.thatsrozum.partyLib.impl.managers.PartyManagerImpl
 import org.bukkit.plugin.java.JavaPlugin
 
 /**

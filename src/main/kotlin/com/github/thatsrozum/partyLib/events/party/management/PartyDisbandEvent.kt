@@ -1,7 +1,7 @@
-package com.github.thatsrozum.events.party.management
+package com.github.thatsrozum.partyLib.events.party.management
 
-import com.github.thatsrozum.api.objects.Member
-import com.github.thatsrozum.api.objects.Party
+import com.github.thatsrozum.partyLib.api.objects.Member
+import com.github.thatsrozum.partyLib.api.objects.Party
 import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 

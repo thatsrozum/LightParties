@@ -1,7 +1,7 @@
-package com.github.thatsrozum.api.objects
+package com.github.thatsrozum.partyLib.api.objects
 
 
-import com.github.thatsrozum.events.party.PartyMemberRemoveEvent
+import com.github.thatsrozum.partyLib.events.party.PartyMemberRemoveEvent
 
 /**
  * Represents a party.

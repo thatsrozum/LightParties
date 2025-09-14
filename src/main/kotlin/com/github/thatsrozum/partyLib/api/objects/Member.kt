@@ -1,4 +1,4 @@
-package com.github.thatsrozum.api.objects
+package com.github.thatsrozum.partyLib.api.objects
 
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player

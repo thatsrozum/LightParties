@@ -1,6 +1,6 @@
-package com.github.thatsrozum.api.managers
+package com.github.thatsrozum.partyLib.api.managers
 
-import com.github.thatsrozum.events.invitation.InvitationRemoveEvent
+import com.github.thatsrozum.partyLib.events.invitation.InvitationRemoveEvent
 import org.bukkit.entity.Player
 import java.util.UUID
 
