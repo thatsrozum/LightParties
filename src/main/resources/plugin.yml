@@ -1,4 +1,4 @@
 name: PartyLib
-version: '1.4.1'
+version: '1.4.2'
 main: com.github.thatsrozum.partyLib.PartyLibPlugin
 api-version: 1.13
