@@ -28,9 +28,9 @@ $dokka.location:com.github.thatsrozum.api.objects/Party/getMembers/#/PointingToD
 $dokka.location:com.github.thatsrozum.api.objects/Party/hasMember/#com.github.thatsrozum.api.objects.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.objects/-party/has-member.html
 $dokka.location:com.github.thatsrozum.api.objects/Party/removeMember/#com.github.thatsrozum.api.objects.Member/PointingToDeclaration/-party-lib/com.github.thatsrozum.api.objects/-party/remove-member.html
 $dokka.location:com.github.thatsrozum.api////PointingToDeclaration/-party-lib/com.github.thatsrozum.api/index.html
-$dokka.location:com.github.thatsrozum.api/LightPartiesAPI///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-light-parties-a-p-i/index.html
-$dokka.location:com.github.thatsrozum.api/LightPartiesAPI/getInvitationManager/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-light-parties-a-p-i/get-invitation-manager.html
-$dokka.location:com.github.thatsrozum.api/LightPartiesAPI/getPartyManager/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-light-parties-a-p-i/get-party-manager.html
+$dokka.location:com.github.thatsrozum.api/PartyLibAPI///PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-lib-a-p-i/index.html
+$dokka.location:com.github.thatsrozum.api/PartyLibAPI/getInvitationManager/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-lib-a-p-i/get-invitation-manager.html
+$dokka.location:com.github.thatsrozum.api/PartyLibAPI/getPartyManager/#/PointingToDeclaration/-party-lib/com.github.thatsrozum.api/-party-lib-a-p-i/get-party-manager.html
 com.github.thatsrozum.api
 com.github.thatsrozum.api.managers
 com.github.thatsrozum.api.objects
