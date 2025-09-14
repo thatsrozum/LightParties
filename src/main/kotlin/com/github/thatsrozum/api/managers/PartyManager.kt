@@ -7,7 +7,7 @@ import org.bukkit.entity.Player
 /**
  * Manages [Party] instances.
  *
- * Used for creating and disbanding parties.
+ * This interface is primarily used for creating and disbanding parties.
  * @property parties A copy of the parties set.
  */
 interface PartyManager {

@@ -4,7 +4,7 @@ import com.github.thatsrozum.api.managers.InvitationManager
 import com.github.thatsrozum.api.managers.PartyManager
 
 /**
- * The API of the plugin, which should be loaded with JavaPlugin#getServer()#getServicesManager()
+ * The API of the plugin, which is loaded with JavaPlugin#getServer()#getServicesManager()
  */
 interface PartyLibAPI {
     /**

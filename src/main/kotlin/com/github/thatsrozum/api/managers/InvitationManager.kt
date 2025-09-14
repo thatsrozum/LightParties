@@ -6,7 +6,7 @@ import java.util.UUID
 /**
  * Manages invitations and temporarily stores them in the plugin's cache.
  *
- * This is a utility interface for sending, checking, and removing invitations.
+ * This interface is used for sending, checking, and removing invitations.
  */
 interface InvitationManager {
 
